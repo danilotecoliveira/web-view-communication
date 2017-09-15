@@ -1,0 +1,48 @@
+﻿﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Leitor</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <div>
+        <div>
+            <button onclick="CallCSharp('ShowDate');">Get Date</button>
+        </div><br />
+
+        <div>
+            <button onclick="CallCSharp('ShowTime');">Get Time</button>
+        </div><br />
+
+        <textarea id="result" rows="10" cols="30"></textarea>
+    </div>
+
+
+
+
+
+    <script type="text/javascript">
+
+        function Callback(data) {
+            document.getElementById('result').value = data;
+        }
+
+
+
+
+
+        function CallCSharp(func) {
+            try {
+                CSharp.Invoke(func);
+            }
+            catch (err) {
+                log(err);
+            }
+        }
+    </script>
+</body>
+</html>
