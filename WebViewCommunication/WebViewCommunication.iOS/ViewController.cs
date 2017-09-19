@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using UIKit;
 using WebKit;
+using WebViewCommunication.Models;
 
 namespace WebViewCommunication.iOS
 {
@@ -68,5 +69,3 @@ namespace WebViewCommunication.iOS
 
     }
 }
-}
-
