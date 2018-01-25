@@ -53,7 +53,7 @@ namespace WebViewCommunication.iOS
         public void AppDomainInitializer()
         {
             var userController = new WKUserContentController();
-            userController.AddScriptMessageHandler(this, "readr");
+            userController.AddScriptMessageHandler(this, "CSharp");
 
             var config = new WKWebViewConfiguration
             {
